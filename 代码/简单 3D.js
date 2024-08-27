@@ -1706,12 +1706,12 @@ void main() {
     },
     {
       blockType: BlockType.LABEL,
-      text: "Clearin",
+      text: "清除",
     },
     {
       opcode: "resetEverything",
       blockType: BlockType.COMMAND,
-      text: "reset everything",
+      text: "重置物体",
       def: function () {
         resetEverything();
       },
@@ -1720,7 +1720,7 @@ void main() {
     {
       opcode: "clear",
       blockType: BlockType.COMMAND,
-      text: "clear [LAYERS]",
+      text: "清除 [LAYERS]",
       arguments: {
         LAYERS: {
           type: ArgumentType.STRING,
@@ -1744,7 +1744,7 @@ void main() {
     {
       opcode: "clearColor",
       blockType: BlockType.COMMAND,
-      text: "set clear color R: [RED] G: [GREEN] B: [BLUE] A: [ALPHA]",
+      text: "设置清除颜色 R: [RED] G: [GREEN] B: [BLUE] A: [ALPHA]",
       arguments: {
         RED: {
           type: ArgumentType.NUMBER,
@@ -1798,12 +1798,12 @@ void main() {
     },
     {
       blockType: BlockType.LABEL,
-      text: "Meshes",
+      text: "网格",
     },
     {
       opcode: "allMeshes",
       blockType: BlockType.REPORTER,
-      text: "all meshes",
+      text: "所有网格",
       disableMonitor: true,
       def: function () {
         return Array.from(meshes.keys()).join(",");
@@ -1812,7 +1812,7 @@ void main() {
     {
       opcode: "createMesh",
       blockType: BlockType.COMMAND,
-      text: "create mesh [NAME]",
+      text: "创建网格 [NAME]",
       arguments: {
         NAME: {
           type: ArgumentType.STRING,
